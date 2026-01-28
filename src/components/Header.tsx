@@ -3,6 +3,8 @@ import React from "react"
 import Image from "next/image"
 import { Facebook, Github, Youtube, Instagram, Linkedin, Sun, Moon } from "lucide-react"
 import { useTheme } from "@/contexts/ThemeContext"
+import logoLight from "@/public/Logo.png"
+import logoDark from "@/public/logoWhite.png"
 
 export default function Header() {
   const { theme, toggleTheme, mounted } = useTheme()
@@ -13,7 +15,7 @@ export default function Header() {
       <div className="flex items-center gap-4">
         {mounted ? (
           <Image
-            src={theme === "dark" ? "/logoWhite.png" : "/logo.png"}
+            src={theme === "dark" ? logoDark : logoLight}
             alt="Furo Labs Logo"
             className="w-16 h-auto"
             width={64}
