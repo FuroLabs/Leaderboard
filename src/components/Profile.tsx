@@ -131,6 +131,7 @@ export default function Profile({ isOpen, setIsOpen, profile }: ProfileProps) {
               alt={profileDetails.name}
               width={104}
               height={104}
+              unoptimized
             />
             <div className="relative w-full">
               <h4 className="font-bold w-11/12 text-2xl text-(var(--header-text)) truncate">

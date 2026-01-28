@@ -166,6 +166,7 @@ export default function Home() {
                   alt={user.name}
                   width={40}
                   height={40}
+                  unoptimized
                 />
                 <div>{user.name}</div>
               </button>
@@ -180,6 +181,7 @@ export default function Home() {
                   alt={user.name}
                   width={40}
                   height={40}
+                  unoptimized
                 />
                 <div>{user.name}</div>
               </div>
