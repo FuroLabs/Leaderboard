@@ -10,6 +10,7 @@ import { relativeTime } from "@/utils/relative-time"
 import { CHANGESCORE_MULTIPLIER, COMMIT_MULTIPLIER } from "@/utils/scoring"
 import { useEffect, useState } from "react"
 import { useSearchParams, useRouter } from "next/navigation"
+import Image from "next/image"
 import moxyLeaderboardImage from "@/assets/images/moxy-leaderboard.png"
 import avatarPlaceholder from "@/assets/images/placeholder.png"
 
@@ -158,13 +159,15 @@ export default function Home() {
                 onClick={() => openProfile(user.name)}
                 className="flex gap-4 items-center cursor-pointer hover:underline font-medium group relative text-[var(--table-link-hover)]"
               >
-                <img
+                <Image
                   src={(user.avatarUrl || avatarPlaceholder.src) as string}
                   onError={(e) => {
                     e.currentTarget.src = avatarPlaceholder.src
                   }}
                   className="w-10 h-auto rounded-full"
                   alt={user.name}
+                  width={40}
+                  height={40}
                 />
                 <div>{user.name}</div>
               </button>
@@ -173,10 +176,12 @@ export default function Home() {
                 <div className="pointer-events-none absolute duration-200 transition-opacity opacity-0 group-hover:opacity-100 bottom-full -left-10 mb-2 block bg-gray-800 text-white text-sm rounded px-2 py-1">
                   Deactivated Account
                 </div>
-                <img
+                <Image
                   src={avatarPlaceholder.src}
                   className="w-10 h-auto rounded-full"
                   alt={user.name}
+                  width={40}
+                  height={40}
                 />
                 <div>{user.name}</div>
               </div>

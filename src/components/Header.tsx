@@ -1,5 +1,6 @@
 "use client"
 import React from "react"
+import Image from "next/image"
 import { Facebook, Github, Youtube, Instagram, Linkedin, Sun, Moon } from "lucide-react"
 import { useTheme } from "@/contexts/ThemeContext"
 
@@ -11,10 +12,12 @@ export default function Header() {
       {/* Left Section: Logo + Title */}
       <div className="flex items-center gap-4">
         {mounted ? (
-          <img
+          <Image
             src={theme === "dark" ? "/logoWhite.png" : "/logo.png"}
             alt="Furo Labs Logo"
             className="w-16 h-auto"
+            width={64}
+            height={64}
           />
         ) : (
           <div className="w-16 h-16" />

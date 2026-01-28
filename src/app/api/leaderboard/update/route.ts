@@ -22,7 +22,7 @@ export async function updateLeaderboard() {
     }
   }
 
-  let leaders = analyseCommits(commits).sort((a, b) => b.overallScore - a.overallScore)
+  const leaders = analyseCommits(commits).sort((a, b) => b.overallScore - a.overallScore)
 
   // Filter out deactivated accounts by checking if they're still active on GitHub
   const activeLeaders = []

@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { User } from "@/types/user"
 import { useEffect, useRef, useState } from "react"
 import {
@@ -121,13 +122,15 @@ export default function Profile({ isOpen, setIsOpen, profile }: ProfileProps) {
         <div ref={visibleAreaRef}>
           <div className="h-2 rounded-full w-1/3 mx-auto my-3 bg-gray-200 sm:hidden" />
           <div className="flex items-center gap-5 w-full">
-            <img
+            <Image
               src={(profileDetails.avatarUrl || avatarPlaceholder.src) as string}
               onError={(e) => {
                 e.currentTarget.src = avatarPlaceholder.src
               }}
               className="w-26 h-auto rounded-full"
               alt={profileDetails.name}
+              width={104}
+              height={104}
             />
             <div className="relative w-full">
               <h4 className="font-bold w-11/12 text-2xl text-(var(--header-text)) truncate">
