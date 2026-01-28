@@ -3,8 +3,8 @@ import React from "react"
 import Image from "next/image"
 import { Facebook, Github, Youtube, Instagram, Linkedin, Sun, Moon } from "lucide-react"
 import { useTheme } from "@/contexts/ThemeContext"
-import logoLight from "@/public/Logo.png"
-import logoDark from "@/public/logoWhite.png"
+import logoLight from "../../public/Logo.png"
+import logoDark from "../../public/logoWhite.png"
 
 export default function Header() {
   const { theme, toggleTheme, mounted } = useTheme()
