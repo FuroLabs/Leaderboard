@@ -13,8 +13,6 @@ import { useSearchParams, useRouter } from "next/navigation"
 import Image from "next/image"
 import moxyLeaderboardImage from "@/assets/images/moxy-leaderboard.png"
 import avatarPlaceholder from "@/assets/images/placeholder.png"
-
-import Image from "next/image"
 import Profile from "@/components/Profile"
 
 export default function Home() {
